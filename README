@@ -1,3 +1,5 @@
-I've been writing Python and d3.js scripts to have a little fun with our fantasy baseball league: Python to screen-scrape stats and standings from the ESPN league pages, and d3.js for some of the data visualization.
+I've been writing Python and d3.js scripts to have a little fun with our fantasy baseball league: Python to screen-scrape stats and standings from our ESPN league pages, and d3.js for some of the data visualization.
 
-I'll try to post all of the necessary files here so others can play around with it, too. 
+I'll try to post all of the necessary files here so others can play around with it, too.
+
+If you aren't in the Crazy Rhythms league and have no idea what I'm talking about when I say "Crazy Rhythms," you're more than welcome to the code, but bear in mind much of it is league-specific.
