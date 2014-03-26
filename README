@@ -1,0 +1,3 @@
+I've been writing Python and d3.js scripts to have a little fun with our fantasy baseball league: Python to screen-scrape stats and standings from the ESPN league pages, and d3.js for some of the data visualization.
+
+I'll try to post all of the necessary files here so others can play around with it, too. 
