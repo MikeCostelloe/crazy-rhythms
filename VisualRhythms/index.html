@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Crazy Rhythms</title>
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<style type="text/css">
+			body {
+			  font: 10px sans-serif;
+			}
+			h1 {
+			  font: 14px sans-serif;
+			  fill: #a0a0a0;
+			}
+			a {
+			  color: #1f77b4;
+			  text-decoration: none;
+			}
+			.axis {
+			  font: 10px sans-serif;
+			  fill: #a0a0a0;
+			}
+			.axis path,
+			.axis line {
+			  fill: none;
+			  stroke: #a0a0a0;
+			  shape-rendering: crispEdges;
+			}
+			/*
+			.x.axis path {
+			  display: none;
+			}
+			*/
+			.line {
+			  fill: none;
+			  stroke-width: 2px;
+			}
+			#tooltip {
+			  font: 11px sans-serif;
+			}
+			#container {
+				width: 1100px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			#column {
+				width:200px;
+				height:800px;
+				float: left;
+			#chart1 {
+				width:900px;
+				float: right;
+			}
+			#chart2 {
+				width:900px;
+				float: right;
+			}			
+
+		</style>
+		
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-6865331-1', 'mikecostelloe.com');
+	  ga('send', 'pageview');
+
+	</script>
+	</head>
+	<body>
+		<!--d3 navigation--!>
+		<div id="container">
+		<div id="column">
+		<h1>Visual Rhythms</h1>
+		<a href="http://www.mikecostelloe.com" target="_blank">Mike Costelloe</a>
+		<p>This project uses Python to scrape <a href="http://games.espn.go.com/flb/leagueoffice?leagueId=30635&seasonId=2014" target="_blank">Crazy Rhythms</a> league data from the ESPN Fantasy Baseball pages and d3.js to create these interactive visualizations. The data is updated weekly on Monday morning. All code is freely available on GitHub at <a href="https://github.com/MikeCostelloe/crazy-rhythms" target="_blank">GitHub.com/MikeCostelloe/crazy-rhythms</a>
+		</div>
+		<div id="chart1">
+				<!--d3 script--!>
+				<script type="text/javascript" src="http://mikecostelloe.com/crazyrhythms/js/standings1.js"></script>
+				<!--d3 script end--!>
+		</div>
+		<div id="chart2">
+			<select id="menu">
+				<option value="R">Runs</option>
+				<option value="HR">Home Runs</option>
+				<option value="TB">Total Bases</option>
+				<option value="RBI">Runs Batted In</option>
+				<option value="SBN">Stolen Bases Net</option>
+				<option value="OBP">On-Base Pencentage</option>
+				<option value="IP">Innings Pitched</option>
+				<option value="K">Strikeouts</option>
+				<option value="SV">Saves</option>
+				<option value="ERA">Earned Run Average</option>
+				<option value="WHIP">WHIP</option>
+				<option value="K-BB">Strikeout to Walk Ratio</option>
+				<option value="MOVES">Roster Moves</option>
+			</select>
+			
+			<!--d3 script--!>
+			<script type="text/javascript" src="http://mikecostelloe.com/crazyrhythms/js/stats1.js"></script>
+			<!--d3 script end--!>
+	</body>
+</html>
