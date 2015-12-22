@@ -16,6 +16,14 @@
 			  color: #1f77b4;
 			  text-decoration: none;
 			}
+			.statTable {
+				width:800px;
+				border: 1px;
+			}
+			.statTable th {
+				color:#1f77b4;
+				text-align:left;
+			}
 			.axis {
 			  font: 10px sans-serif;
 			  fill: #a0a0a0;
@@ -45,8 +53,9 @@
 			}
 			#column {
 				width:200px;
-				height:800px;
+				height:1200px;
 				float: left;
+			}
 			#chart1 {
 				width:900px;
 				float: right;
@@ -54,6 +63,11 @@
 			#chart2 {
 				width:900px;
 				float: right;
+			}
+			#table1 {
+				width:800px;
+				float:left;
+				padding:20px 0px 0px 70px;
 			}			
 
 		</style>
@@ -75,7 +89,7 @@
 		<div id="column">
 		<h1>Visual Rhythms</h1>
 		<a href="http://www.mikecostelloe.com" target="_blank">Mike Costelloe</a>
-		<p>This project uses Python to scrape <a href="http://games.espn.go.com/flb/leagueoffice?leagueId=30635&seasonId=2014" target="_blank">Crazy Rhythms</a> league data from the ESPN Fantasy Baseball pages and d3.js to create these interactive visualizations. The data is updated weekly on Monday morning. All code is freely available on GitHub at <a href="https://github.com/MikeCostelloe/crazy-rhythms" target="_blank">GitHub.com/MikeCostelloe/crazy-rhythms</a>
+		<p>This project uses Python to scrape <a href="http://games.espn.go.com/flb/standings?leagueId=30635&seasonId=2015" target="_blank">Crazy Rhythms</a> league data from the ESPN Fantasy Baseball pages and d3.js to create these interactive visualizations. The data is updated weekly on Monday morning.
 		</div>
 		<div id="chart1">
 				<!--d3 script--!>
@@ -102,5 +116,12 @@
 			<!--d3 script--!>
 			<script type="text/javascript" src="http://mikecostelloe.com/crazyrhythms/js/stats1.js"></script>
 			<!--d3 script end--!>
+		</div>
+		<div id="table1">
+			<center>FAUX-ROTO STANDINGS</center>
+			<!--d3 script--!>
+			<script type="text/javascript" src="http://mikecostelloe.com/crazyrhythms/js/roto1.js"></script>
+		</div>
+	</div>
 	</body>
 </html>

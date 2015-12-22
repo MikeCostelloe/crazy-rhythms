@@ -1,9 +1,9 @@
 <!--
 function standings1() {
 	//Conventional Margins start
-	var margin = {top: 20, right: 40, bottom: 10, left: 40};
+	var margin = {top: 20, right: 40, bottom: 20, left: 80};
 		width = 900 - margin.left - margin.right,
-		height = 300 - margin.top - margin.bottom;
+		height = 500 - margin.top - margin.bottom;
 
 	var svg = d3.select("#chart1").append("svg")
 		.attr("width", width + margin.left + margin.right)
@@ -37,8 +37,8 @@ function standings1() {
 		.x(function(d) { return x(d.Week); })
 		.y(function(d) { return y(d.Record); });
 	
-	//Data load and two console logs, before and after the data.map
-	d3.csv('http://mikecostelloe.com/crazyrhythms/files/2014Standings.csv', function(error, data) {
+	//Data load 
+	d3.csv('http://mikecostelloe.com/crazyrhythms/files/2015Standings.csv', function(error, data) {
 	
 		//Splits into 10 colors by owner
 		color.domain(d3.keys(data[0]).filter(function(key) { return key !== 'Week'; }));
@@ -53,11 +53,11 @@ function standings1() {
 			});
 
 		//x-Domain corresponds to Weeks 
-		x.domain([1,5]);
+		x.domain([1,21]);
 
 		//y-Domain to min/max of winPct's
 		y.domain([
-			0,
+			d3.min(owners, function(c) { return d3.min(c.values, function(v) { return v.Record; }); }),
 			d3.max(owners, function(c) { return d3.max(c.values, function(v) { return v.Record; }); })
 		])
 

@@ -1,9 +1,9 @@
 <!--
 function stats1() {
 	//Conventional Margins start
-	var margin = {top: 20, right: 40, bottom: 20, left: 40};
+	var margin = {top: 20, right: 40, bottom: 20, left: 80};
 		width = 900 - margin.left - margin.right,
-		height = 400 - margin.top - margin.bottom;
+		height = 500 - margin.top - margin.bottom;
 
 	var svg = d3.select("#chart2").append("svg")
 		.attr("width", width + margin.left + margin.right)
@@ -26,7 +26,7 @@ function stats1() {
 	var xAxis = d3.svg.axis()
 		.scale(x)
 		.orient('bottom')
-		.ticks(5);
+		.ticks(8);
 		
 	var yAxis = d3.svg.axis()
 		.scale(y)
@@ -54,13 +54,13 @@ function stats1() {
 			});
 	
 		//x-Domain corresponds to Weeks 
-		x.domain([1,5]);
+		x.domain([0,21]);
 	
 		//y-Domain to min/max of winPct's
 		y.domain([
-			0,
+			d3.min(owners, function(c) { return d3.min(c.values, function(v) { return v.Record; }); }),
 			d3.max(owners, function(c) { return d3.max(c.values, function(v) { return v.Record; }); })
-		])
+		]);
 	
 		svg.append('g')
 			.attr('class', 'x axis')
@@ -144,13 +144,13 @@ function stats1() {
 						return {Week: d.Week, Record: +d[name]};
 						})
 					};
-				})
+				});
 
 			//y-Domain to min/max of winPct's
 			y.domain([
-				0,
+				d3.min(owners, function(c) { return d3.min(c.values, function(v) { return v.Record; }); }),
 				d3.max(owners, function(c) { return d3.max(c.values, function(v) { return v.Record; }); })
-			])					
+			]);
 			
 			svg.select('.x.axis')
 				.call(xAxis);
