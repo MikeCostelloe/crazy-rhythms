@@ -10,7 +10,7 @@ def combineStats():
 			
 			cols = ['id', 'Owner']
 
-			for w in [0, 1]: #CHANGE THIS WEEKLY
+			for w in [0, 1, 2, 3]: #CHANGE THIS WEEKLY
 			
 				cols.append('%s' % w)
 

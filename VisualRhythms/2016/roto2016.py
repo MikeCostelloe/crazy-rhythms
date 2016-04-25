@@ -8,7 +8,7 @@ def rotoScrape():
 			
 	cols = ['id', 'Owner']
 
-	df = pd.read_csv('Week1_stats.csv') #CHANGE THIS WEEKLY
+	df = pd.read_csv('Week3_stats.csv') #CHANGE THIS WEEKLY
 
 	stat2 = pd.merge(stat1, df, on='id', how='outer')
 

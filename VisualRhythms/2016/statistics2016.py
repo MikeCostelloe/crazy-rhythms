@@ -34,7 +34,7 @@ def statScrape():
 	
 	statData.index.names = ["id"]
 	
-	statData.to_csv('Week1_stats.csv', encoding='utf-8') #CHANGE THIS WEEKLY
+	statData.to_csv('Week3_stats.csv', encoding='utf-8') #CHANGE THIS WEEKLY
 	
 	return statData
 

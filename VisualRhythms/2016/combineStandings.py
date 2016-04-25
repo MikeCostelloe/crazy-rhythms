@@ -6,7 +6,7 @@ def readStandings():
 
 	stands = pd.read_csv('owners.csv')
 
-	for i in [0, 1]: #CHANGE THIS WEEKLY
+	for i in [0, 1, 2, 3]: #CHANGE THIS WEEKLY
 
 		df = pd.read_csv('Week%s_standings.csv' % i)
 

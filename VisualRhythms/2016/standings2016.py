@@ -22,7 +22,7 @@ def standScrape():
 			rows = table.findAll('tr')
 			ids = [getID(r) for r in rows[2:]]
 			records = [getRecord(r) for r in rows[2:]]
-			return DataFrame(records, index=ids, columns=['1']) #CHANGE THIS WEEKLY
+			return DataFrame(records, index=ids, columns=['3']) #CHANGE THIS WEEKLY
 	
 	#league URL with with the embedded string for year
 	url = 'http://games.espn.go.com/flb/standings?leagueId=30635&seasonId=2016'
@@ -38,6 +38,6 @@ def standScrape():
 	standData.index.names = ["id"]
 	
 	#Print each year to a CSV
-	standData.to_csv('Week1_standings.csv', encoding='utf-8') #CHANGE THIS WEEKLY
+	standData.to_csv('Week3_standings.csv', encoding='utf-8') #CHANGE THIS WEEKLY
 	
 	return standData
